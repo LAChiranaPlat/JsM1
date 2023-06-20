@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		//FUNCIONES NOMBRADAS
+		function saludar(user){
+			console.clear()
+			console.log("=============================================")
+			console.log(`Bienvenido ${user} al Curso de Javascript Vanilla`)
+			console.log("Clase 03: Arrays y Funciones de Usuario")
+			console.log("=============================================")
+		}
+
+		function sumatoria3(n1,n2,n3){
+			console.log(n1+n2+n3)
+			return n1+n2+n3
+		}
+
+		function promediar(total){
+			return total/3
+		}
+
+
+		const sueldo = function(horas,phoras){
+			return horas*phoras
+		}
+
+		const registro =  (alumno,x,y,z,aa) =>
+		{
+			console.log("Registrando "+alumno+" ...")
+			console.log("Procesando...")
+			console.log("Finalizando...")
+			return true
+		}				///funciones flecha
+
+//		console.log(registro("Cesar"))
+
+		function clases(){//this->
+			console.log(this)
+		}
+
+
+		function sumar(...cant){
+			let total=0
+
+			cant.forEach(	(n)=> total+=n 	)
+
+			return total
+		}
+		//			A,M,C,A,N,P
+		const notas=[100,95,10,10,10,150]
+		
+		let ale, mig, restoNotas
+		
+		[ale,mig,...restoNotas] = notas
+/*
+		console.log(ale)
+		console.log(mig)
+		console.log(restoNotas)
+*/
+		//console.log( sumar(...notas) )
+
+		//DESESTRUCTURACIÓN
+
+		let a,b,c,d,e,f
+		[a,b,c,d,e,f] = [10,12,15,20,30,40]
+
+
+		function contadorDigitos(number){
+
+			//limite
+			if(number>=10000){
+				return "desconocido"
+			}if(number>999){//1000
+				return 4
+			}else if(number>99){//100
+				return 3
+			}else if(number>9){//10
+				return 2
+			}else{
+				return 1
+			}
+
+		}
+
+//		console.log(	contadorDigitos(788)	)
+
+		//156
+		//1 centena
+		//5 decenas
+		//6 unidades
+
+		function valores(cant){
+			console.clear()
+			//156
+			let centenas=Math.floor(cant/100)
+			let sobrante=cant-(centenas * 100)//56
+			let decenas=Math.floor(sobrante/10)
+			sobrante=sobrante-(decenas*10)
+
+			//ceil(3.1)4		arriba
+			//floor(3.9)3		abajo
+			//round(2.3)2		(2.6)3
+
+			console.log(centenas+" Centena(s)")
+			console.log(decenas+" Decena(s)")
+			console.log(sobrante+" Unidad(es)")
+		}
+
+		//valores(225)
+
+
+	</script>
+
+</body>
+</html>

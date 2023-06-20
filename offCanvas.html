@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta nam="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+
+		.content{
+			width: 100%;
+			max-width: 1300px;
+			margin: auto;
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+		}
+		
+		.nav{
+			position: absolute;
+			width: 100%;
+			max-width: 400px;
+			height: 100%;
+			background: #000;
+			top: 0;
+			right: -400px;
+			transition: transform .3s ease-in;
+			will-change: transform;
+			display: flex;
+			flex-direction: column;
+			overflow: auto;
+		}
+
+		.nav>a{
+			height: 50px;
+			line-height: 50px;
+			text-indent: 15px;
+			text-decoration: none;
+			color: white
+		}
+
+		.showMenu{
+			transform: translateX(-400px);
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="content" id="content">
+		
+		<a href="#" id="btnMenu">Menu</a>
+
+		<nav class="nav" id="menu">
+			<a href="#" class="js-item items">Item A</a>
+		</nav>
+
+
+
+	</div>
+
+<script type="text/javascript">
+	
+	const root=document.getElementById("content")
+	const menu=document.getElementById("menu")
+	const icon=document.getElementById("btnMenu")
+
+
+	icon.addEventListener("click",(event)=>{
+
+		event.preventDefault()
+
+		menu.classList.toggle("showMenu")
+
+		setTimeout(()=>{
+			for (var i = 1; i < 51; i++) {
+				const item=document.createElement("a")
+				item.setAttribute("href","#")
+				item.setAttribute("class","js-item")
+				item.insertAdjacentHTML("afterbegin","Item..."+i)
+				menu.append(item)
+			}
+					
+		},3000)
+
+	})
+
+	//DELEGACION DE EVENTOS
+	menu.addEventListener("click",(e)=>{
+
+		if(e.target.classList.contains("js-item")){
+			console.log(e.target)
+		}
+
+	})
+
+</script>
+</body>
+</html>

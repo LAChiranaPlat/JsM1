@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+
+		let nombres=["Cristian","Joel","Junior","Manuel","Mario"]
+
+		let nuevosAlumnos=["Nestor","Julio","Miguel","Alejandro","Pablo","Michell","Nimio"]		
+		//console.log( nombres[0] )
+
+		//Bucles: proceso repetitivo
+		//iteraciones: cada repiticion de un bucle 
+		//iterador: lee cada iteracion de un bucle
+		//iterar: leer cada iteracion
+
+		/*
+		for (let i = 0; i < nombres.length; i++) {
+			console.log(nombres[i])
+		}
+		*/
+/*
+		nombres.push(nuevosAlumnos[0])
+		nombres.push(nuevosAlumnos[1])
+		nombres.push(nuevosAlumnos[2])
+		
+		nuevosAlumnos.forEach(	function(name){
+			nombres.push(name)
+		})
+*/
+		nombres.push(...nuevosAlumnos)
+		//A,B,C
+	
+		nombres.forEach(	function(name){
+			console.log(name)
+		})
+
+		//push()					ADD ELEMENT 	END
+		//unshift()					ADD ELEMENT		START
+
+		//POP						REMOVE ELEMENT	END
+		//SHIFT						REMOVE ELEMENT	START
+
+		//SLICE 					GET PART ARRAY
+		//SPLICE					REMOVE, REPLACE
+
+		const notas=[12,13,11,10,16,17,6,5,12]//notas aprobatorias >= 13
+
+		const aprobados=notas.filter(function(nota){
+			return nota>=13
+		})
+
+		const result=nombres.find(function(name){
+			return name=="Miguel"
+		})
+
+		
+
+		console.log("Resultado: "+result)
+
+	</script>
+
+</body>
+</html>

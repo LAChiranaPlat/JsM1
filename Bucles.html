@@ -1,0 +1,176 @@
+
+<botones />
+
+<script type="text/javascript">
+
+	/*
+	let permiso=true
+
+	let contador=100
+
+	while(contador>=1)
+	{
+		
+		contador--
+
+		if(contador % 2 != 0){ //11
+			//break		//detiene el bucle
+			continue
+		}
+
+		console.log("Saludos "+ contador)//100
+
+	}
+*/
+/*
+	do{
+
+		console.log("[DoWhile]saludos")
+
+	} while(false)
+*/
+/*
+	12: 0,1,2,3,,,,,,12
+*/
+	/*
+	let tables=1
+
+	while(tables<=12){
+
+		let iterador=0//OK
+		
+		while(iterador<=12){
+
+			console.log(tables+" * "+iterador+" = "+tables*iterador)
+			iterador++
+
+		}
+
+		tables++
+		console.log("================["+tables+"]")
+	}
+	*/
+
+//FACTORIAL CON WHILE
+	
+	//!6	= 1*2*3*4
+	//10	= 1*2*3*4*5*6*7*8*9*10
+/*
+	let number=6
+	//let numberPrint=number
+	let iterador=1
+
+	let factorial=1
+	let cadena=""
+
+	while(iterador<=number){
+
+		cadena += "*"+iterador
+		factorial *= iterador		//4,12,24,24
+		iterador++
+
+	}
+
+	console.log("Factorial de "+number+" = "+factorial+ " ["+cadena+"]")
+*/
+
+//IMPRIMAN LOS PRIMEROS 10 NUMEROS PRIMOS
+/*
+	let flag=true
+	let contador=1
+	let contadorPrimos=0
+	let cadena=""
+	
+	while(flag){
+
+		if(contadorPrimos==20){
+			break//flag=false
+		}
+
+		if(isPrimo(contador)){
+			cadena+="- "+contador
+			contadorPrimos++
+		}
+
+		contador++		//numeros
+		
+	}
+
+	console.log(cadena)//PROCESO MECANICO
+
+	function isPrimo(number){
+		let i=2
+
+		while(i < number){
+			
+			if(number%i == 0 )
+				return false
+			i++
+
+		}
+
+		return number !== 1	//true
+	}
+*/
+	/*
+		2/2		=0
+		2/1		=1
+		
+		18/18	=0
+		18/1	=0
+
+		18/2	=0	2 3 4 5 6 7 8 9	10	11	12	13	14	15	16	17
+
+	*/
+
+	//Funciones de primera de clase
+	function myException(ms,code){/
+
+		this.mensaje = ms
+		this.name = "Excepcion de Notas"
+		this.code = code
+
+	}//ESTRUCTURAR LA INFORMACION DE ERROR
+	//OBJETO
+
+
+	function verificarNumero(n){
+
+		if(typeof n!="number"){
+			
+			throw new myException("No es un numero",105)
+			
+		}
+
+		if(n>20 || n<0){
+			
+			throw "Valor no valido"
+			
+		}
+
+		if(n<10){
+			
+			throw "Desaprobado"
+			
+		}
+
+		console.log("procesando....")
+	}
+
+	try{
+	
+		verificarNumero("a")//ok
+	
+	}catch(x){
+
+		console.error(x.code)//error
+	
+	}
+
+
+	//console.log("Procesando en Primer nivel")
+
+	//ECMA SCRIPT 2015
+	//APIS DOM, TOUCH, READER, AJAX
+
+</script>

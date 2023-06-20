@@ -1,0 +1,105 @@
+<script type="text/javascript">
+	/*
+	let cant=prompt("Ingrese una cantidad")
+	let cant2=prompt("Ingrese una cantidad")
+
+	//let total= parseInt(cant)+parseInt(cant2)
+	let total= +cant + +cant2
+
+	console.log(total)
+	*/
+/*
+	let usuario=prompt("Ingrese sus Nombres:")
+	console.log(`Bievenido ${usuario} a Javascript`)
+*/
+	
+	/*
+	let calificacion=prompt("Nota Final: ")
+					 //string "asasas"		NaN
+					 //int 					12
+
+	let notaConvertida= +calificacion
+
+	//operador matematico + sumar, string + string (une)
+
+	if(isNaN(notaConvertida)){
+		
+		console.warn("El valor ingresado no es un numero: " + calificacion)
+
+	}else{
+
+		if(notaConvertida>20 || notaConvertida<0){
+		
+			console.warn("La nota ingresada no es valida")
+
+		}else{
+			
+			console.log(notaConvertida)
+			//AD[18-20],A[15-17],B[11-14],C[0-10]
+
+			//15
+			if (notaConvertida>=18) {
+				console.log("AD")
+			}else if (notaConvertida>=15)
+			{
+				console.log("A")
+			}else if (notaConvertida>=11)
+			{
+				console.log("B")
+			}else {
+				console.log("C")
+			}
+
+		}
+
+	}
+*/
+	//PYTHON:
+	/*
+	*	match
+	*/
+	
+
+	let n1=prompt("Ingrese la medida de uno de sus LADOS")//string
+	let n1Int=+n1
+	/*
+	let n2=prompt("Ingrese la 2° cantidad")//string
+	let n3=prompt("Ingrese la 3° cantidad")//string
+
+	let n2Int=+n2
+	let n3Int=+n3
+	*/	
+	const result={
+
+		true:()=>console.warn("El valor ingresado no es un numero: " + n1)
+		,
+		false:()=>{
+			/*
+			let result=n1Int+n2Int
+			console.log(result)
+			*/
+			/*
+			let result= n1Int + n2Int + n3Int
+			result/=2
+			*/
+
+			let result=n1Int*n1Int
+			//OPERADORES:
+				/*
+					ARITMETICOS:+ - / ** %
+					COMPARACION: <,>,>=,<=, <>,!=, ==, ===
+					ASIGNACION: 	=, +=, -=, *=, /=, **=, %=
+					INCREMENTO/DECREMENTO: 
+								PRE POST : ++X	X--
+					LOGICOS		&& || !
+				*/
+			console.log(result)
+		}
+
+	}
+
+//	let is_NanNumber=isNaN(n1Int) || isNaN(n2Int) || isNaN(n3Int)
+
+	result[	isNaN(n1Int) ]()
+
+</script>

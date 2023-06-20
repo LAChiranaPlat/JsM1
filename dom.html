@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<style type="text/css">
+			
+			.spot{
+				background: rgba(0,0,0,0.6);
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+
+				opacity: 0;
+				pointer-events: none;
+
+				transition: opacity .3s ease-in;
+				will-change: opacity;
+
+			}
+
+			.spotMessage{
+				background: white;
+				width: 500px;
+				height: 200px;
+				position: absolute;
+				margin: auto;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+			}
+
+			.showSpot{
+				opacity: 1;
+				pointer-events: auto;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		
+		<button id="btnAceptar">Aceptar</button>
+
+		<div class="spot" id="spot">
+
+			<div class="spotMessage" id="spotMessage">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<button id="btnClose">Cerrar</button>
+			</div>
+
+		</div>
+
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<a href="#" id="btnGo">Ir Arriba</a>
+	</body>
+
+	<script type="text/javascript">
+
+		const contenedor = document.getElementById("contenedor")
+		const spot = document.getElementById("spot")
+		const spotMessage = document.getElementById("spotMessage")
+		const aceptar = document.getElementById("btnAceptar")
+		const btnGo = document.getElementById("btnGo")
+
+		const close = document.getElementById("btnClose")
+		
+		//contenedor.insertAdjacentHTML("",html)
+		//beforebegin/beforeend/afterbegin/afterend//
+		/*
+			contenedor.style.background=""
+			contenedor.style.border=""
+			contenedor.style.borderRadius=""
+
+			contenedor.style.cssText=""
+		*/
+
+		aceptar.addEventListener("click", (event)=>{
+			
+			spot.classList.add("showSpot")
+
+		})
+
+		aceptar.addEventListener("click", (event)=>{
+			
+			console.log("Running")
+
+		})
+
+		
+		close.addEventListener("click",(event)=>{
+
+			event.stopPropagation()
+			spot.classList.remove("showSpot")
+
+		})
+
+		spot.addEventListener("click",function(event){
+			
+			//this.classList.remove("showSpot")
+		})
+
+		spotMessage.addEventListener("click",function(e){
+			
+			e.stopPropagation()
+			console.log("click...")
+
+		})
+
+
+		btnGo.addEventListener("click",function(ev){
+
+			ev.preventDefault()
+
+			//alert("Go Go Go");	//BLOQUEANTES		
+			this.insertAdjacentHTML("afterbegin","Iniciando...")
+
+		})
+		
+	</script>
+
+</html>
